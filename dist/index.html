@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+  <link rel="stylesheet" href="./style.css" />
+  <title>Novis</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+  <header>
+    <!-- top header code start[html] -->
+    <div class="bg-blue-950 py-0">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-16 py-2">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 items-center">
+          <div class="flex items-center space-x-4">
+            <img src="/images/register.png" alt="registered" class="w-10 h-auto" />
+            <div class="text-white font-semibold text-sm">Registered Provider 404544556</div>
+          </div>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="flex items-center space-x-2">
+              <img src="/images/location.png" alt="location" class="h-4 w-4" />
+              <span class="text-white font-normal text-sm">Store Locator</span>
+            </div>
+            <div class="flex items-center space-x-2">
+              <span class="text-white font-normal text-sm">Resources</span>
+            </div>
+            <div class="flex items-center space-x-2">
+              <img src="/images/phone.png" alt="phone" class="h-4 w-4" />
+              <span class="text-white font-normal text-sm">1300 738 885</span>
+            </div>
+            <div class="flex justify-center">
+              <button class="flex items-center bg-white text-blue-950 font-normal text-sm px-3 py-1 rounded">
+                <img src="/images/cart.png" alt="Cart" class="h-4 w-4 mr-2" />
+                Online Store
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- nav menu bar code start[html] -->
+    <div class="container mx-auto px-4 sm:px-6 lg:px-16 py-4">
+      <div class="flex items-center justify-between">
+        <div>
+          <img src="/images/logo.png" alt="logo" class="h-10">
+        </div>
+        <div class="lg:hidden">
+          <button id="navbar-toggle" class="text-blue-900 focus:outline-none">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+            </svg>
+          </button>
+        </div>
+        <div id="navbar-menu" class="hidden lg:flex space-x-6 items-center">
+          <div class="text-blue-900 hover:text-blue-600 cursor-pointer">About Us</div>
+          <div class="text-blue-900 hover:text-blue-600 cursor-pointer">Our Brands</div>
+          <div class="text-blue-900 hover:text-blue-600 cursor-pointer">Products</div>
+          <div class="text-blue-900 hover:text-blue-600 cursor-pointer">Hire</div>
+          <div class="text-blue-900 hover:text-blue-600 cursor-pointer">Complex Rehab</div>
+          <div class="text-blue-900 hover:text-blue-600 cursor-pointer">Contacts</div>
+          <div class="text-blue-900 hover:text-blue-600 cursor-pointer">Education</div>
+          <div>
+            <img src="/images/search.png" alt="search" class="h-6">
+          </div>
+        </div>
+      </div>
+      <div id="mobile-menu" class="hidden lg:hidden flex-col space-y-4 mt-4">
+        <div class="text-blue-900 hover:text-blue-600 cursor-pointer">About Us</div>
+        <div class="text-blue-900 hover:text-blue-600 cursor-pointer">Our Brands</div>
+        <div class="text-blue-900 hover:text-blue-600 cursor-pointer">Products</div>
+        <div class="text-blue-900 hover:text-blue-600 cursor-pointer">Hire</div>
+        <div class="text-blue-900 hover:text-blue-600 cursor-pointer">Complex Rehab</div>
+        <div class="text-blue-900 hover:text-blue-600 cursor-pointer">Contacts</div>
+        <div class="text-blue-900 hover:text-blue-600 cursor-pointer">Education</div>
+        <div>
+          <img src="/images/search.png" alt="search" class="h-6">
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- feedbackenquiry form html code [start] -->
+  <div class="feedback-enquiry-form">
+    <div class="sidebar-contact">
+      <button id="feedbackButton" class="fixed top-[200px] right-0 z-[99] toggle">
+        <div class="quick-enq">
+          <img src="/images/feedback.png" alt="Feedback Icon" />
+        </div>
+      </button>
+      <div id="contactForm"
+        class="hidden fixed top-1/2 right-[5%] z-[99] transform -translate-y-1/2 bg-white w-[350px] p-6 shadow-lg rounded-lg transition-transform duration-300 ease-in-out">
+        <div class="flex justify-end">
+          <div id="closeButton" class="cursor-pointer text-blue-950 text-sm">&#x2716;</div>
+        </div>
+
+        <div class="form-heading font-bold text-lg mb-2">Contact Us</div>
+        <div class="form-subheading text-sm text-gray-700 mb-4">We will get back to you asap!</div>
+        <div class="scroll">
+          <form>
+            <input type="text" name="" placeholder="Name" maxlength="25"
+              class="w-full mb-3 p-2 border border-gray-300 rounded" />
+            <input type="email" name="" placeholder="Email" maxlength="30"
+              class="w-full mb-3 p-2 border border-gray-300 rounded" />
+            <input type="tel" name="" placeholder="Phone Number" maxlength="10"
+              class="w-full mb-3 p-2 border border-gray-300 rounded" />
+            <textarea placeholder="Message here.." maxlength="100"
+              class="w-full mb-3 p-2 border border-gray-300 rounded resize-none"></textarea>
+            <input type="submit" name="" value="Submit"
+              class="w-full p-2 bg-blue-900 text-white rounded cursor-pointer hover:bg-blue-700" />
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slider section code start[html]    -->
+  <section class="section-one bg-gradient-to-r bg-one-bg to-custom-webbg ">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-0">
+      <div class="py-16 px-6 sm:px-12 md:px-14">
+        <div class="text-4xl text-custom-color font-bold">Committed to the Australian Pressure Care Industry and
+          Community</div>
+        <div class="text-base text-gray-700 py-6">
+          Since 2003, Novis® has been providing clinical healthcare products designed for hospitals, aged care
+          facilities, rehabilitation providers and the home care community. With collaboration from our manufacturing
+          and distribution partners, our products and services enhance the lives of thousands of people every day.
+        </div>
+        <button
+          class="group relative inline-flex items-center justify-start overflow-hidden border-1  bg-custom-color px-5 py-2 font-sm transition-all hover:bg-white">
+          <span
+            class="absolute inset-0  border-0 border-white transition-all duration-100 ease-linear group-hover:border-[25px]"></span>
+          <span
+            class="relative w-full text-left text-white transition-colors duration-200 ease-in-out group-hover:text-blue-900">About
+            Novis</span>
+        </button>
+      </div>
+      <div class="relative">
+        <img id="backgroundImage" src="/images/slider22.png" alt="background image" class="w-full h-auto" />
+        <div class="flex justify-between items-center absolute top-1/2 left-5 right-5 z-10 transform -translate-y-1/2">
+          <a href="#" id="leftArrow" class="flex items-center justify-center">
+            <img src="/images/arrow-left.png" alt="left arrow" class="h-8 w-auto" />
+          </a>
+          <a href="#" id="rightArrow" class="flex items-center justify-center">
+            <img src="/images/circle-arrow.png" alt="right arrow" class="h-8 w-auto" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- We are Specialist in Section HTML code [start] -->
+  <section class="we-are-specialist py-4">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-16 py-4">
+      <div class="flex justify-center mb-8">
+        <h2
+          class="font-bold text-2xl bg-gradient-to-r  to-blue-950 from-blue-600 text-transparent bg-clip-text text-center">
+          We Are Specialists In</h2>
+      </div>
+      <div class="grid md:grid-cols-12 gap-6 border-b border-blue-500 pb-6">
+        <div class="lg:col-span-2 col-span-12">
+          <img src="/images/slide2.png" alt="Complex Rehab" class="w-fit h-auto">
+        </div>
+        <div class="lg:col-span-10 col-span-12">
+          <div class="text-custom-color text-lg font-bold mb-2">Complex Rehab</div>
+          <p class="text-gray-700 text-sm">
+            Our highly trained team of professionals works closely with our partners, therapists, and clients to design
+            and deliver custom solutions. We are committed to providing ongoing support and service throughout the
+            lifespan of our high-quality equipment. Our range includes the top-selling Netti 4U Tilt in space reclining
+            wheelchair, and the TA IQ Powerchair which are suitable for indoor and outdoor use. We also offer the Dietz
+            Slimline powerchair, ideal for compact indoor apartments, and the amazing Meyra Optimus 2 powerchair for
+            rugged rural areas or distance travel.
+          </p>
+        </div>
+      </div>
+
+
+      <div class="grid md:grid-cols-12 gap-6 border-b border-blue-500 pb-6 pt-6">
+        <div class="lg:col-span-2 col-span-12">
+          <img src="/images/slide2.png" alt="Complex Rehab" class="w-fit h-auto">
+        </div>
+        <div class="lg:col-span-10 col-span-12">
+          <div class="text-custom-color text-lg font-bold mb-2">Hospital</div>
+          <p class="text-gray-700 text-sm">We understand that hospitals have unique needs when it comes to healthcare
+            and rehabilitation equipment. Whether you opt for rental or purchase, we offer a comprehensive selection of
+            mobility, sleep, and falls prevention aids, coupled with prompt delivery and dedicated support for your
+            utmost convenience. Our range includes walkers, air pressure mattresses, wheelchairs and bathroom and daily
+            living aids.
+            Novis has been providing Aged Care equipment for the best clinical outcomes since 2002. We work with
+            architects, builders, aged care facilities, and project managers to find the best solutions. Our wide range
+            of products include the Procair alternating air mattresses, the Molift patient lifters and ceiling hoists,
+            the Better Living nonslip floor mats and dementia support aids.
+          </p>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-12 gap-6 border-b border-blue-500 pb-6 pt-6">
+        <div class="lg:col-span-2 col-span-12">
+          <img src="/images/slide2.png" alt="Complex Rehab" class="w-fit h-auto">
+        </div>
+        <div class="lg:col-span-10 col-span-12">
+          <div class="text-custom-color text-lg font-bold mb-2">In Home Care</div>
+          <p class="text-gray-700 text-sm">We are delighted to assist you with NDIS, DVA, or HCP-funded assistive
+            technology. Our extensive range includes walkers, wheelchairs, mobility assistance devices, walking sticks,
+            and a variety of disability aids and equipment. Whether you’re navigating the NDIS process for the first
+            time, or you are an experienced Occupational Therapist looking to support a client, our team is here to
+            assist you every step of the way. Navigating assistive technology can be complex, so our educators can guide
+            you through our products, answering any technical or clinical questions you have.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Our Key Service Section HTML code [start] -->
+  <section class="our-key-service py-4">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-16 py-4">
+      <div class="flex justify-center">
+        <div class="font-bold text-2xl bg-gradient-to-r  to-blue-950 from-blue-600 text-transparent bg-clip-text pb-6">
+          Our Key Services</div>
+
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-white text-center font-bold pb-2 text-lg">
+        <div class="bg-custom-color py-16  rounded-lg">
+          Service & Repairs
+        </div>
+        <div class="bg-custom-color py-16 rounded-lg">
+          Installations &<br />Modifications
+        </div>
+        <div class="bg-custom-color py-16 rounded-lg">
+          Hire
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Brand Portfolio Section HTML code [start] -->
+  <section class="our-brand-portfolio py-4">
+    <div class="flex justify-center">
+      <div class="font-bold text-2xl bg-gradient-to-r  to-blue-950 from-blue-600 text-transparent bg-clip-text pb-2">
+        Our Brand Portfolio</div>
+      <div class="text-blue-500 text-xs font-normal underline underline-offset-4 pl-5 pt-2">View All Brands</div>
+    </div>
+
+    <div class="overflow-hidden mt-8 mb-4">
+      <div class="flex animate-scroll gap-20 justify-center">
+        
+        <div class="flex-shrink-0">
+          <img src="/images/brand1.png" alt="paytm" class="w-24">
+        </div>
+        <div class="flex-shrink-0">
+          <img src="/images/brand2.png" alt="indiamart" class="w-24">
+        </div>
+        <div class="flex-shrink-0">
+          <img src="/images/brand3.png" alt="snapdeal" class="w-24">
+        </div>
+        <div class="flex-shrink-0">
+          <img src="/images/brand4.png" alt="jcb" class="w-24">
+        </div>
+        <div class="flex-shrink-0">
+          <img src="/images/brand6.png" alt="today" class="w-24">
+        </div>
+        <div class="flex-shrink-0">
+          <img src="/images/brand3.png" alt="paytm" class="w-24">
+        </div>
+
+        <div class="flex-shrink-0">
+          <img src="/images/brand1.png" alt="paytm" class="w-24">
+        </div>
+        <div class="flex-shrink-0">
+          <img src="/images/brand2.png" alt="paytm" class="w-24">
+        </div>
+        <div class="flex-shrink-0">
+          <img src="/images/brand5.png" alt="hcl" class="w-24 h-auto">
+        </div>
+        <div class="flex-shrink-0">
+          <img src="/images/brand4.png" alt="paytm" class="w-24">
+        </div>
+
+      </div>
+    </div>
+
+
+  </section>
+
+
+
+  <section class="feature product bg-custom-webbg py-3">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-16 py-8">
+      <div class="grid md:grid-cols-12 gap-0">
+        <div class="lg:col-span-5 col-span-12">
+          <img src="/images/feature-bed.png" alt="webinar" class="w-full">
+        </div>
+
+        <div class="lg:col-span-7 col-span-12">
+
+          <div class="flex justify-between items-center flex-wrap-reverse sm:flex-nowrap">
+            <div class="pl-6">
+              <div class="text-blue-400 py-2 text-sm uppercase pt-12">FEATURED PRODUCT</div>
+              <div
+                class="font-bold text-3xl bg-gradient-to-r to-blue-950 from-blue-600 text-transparent bg-clip-text pb-7">
+                Etac Prio: Design with care, customise to user's ability.
+              </div>
+              <div class="text-gray-700 py-3 text-sm text-left">
+                The Etac Prio wheelchair provides a high level of customisation, adaptability and care for users. This
+                tilt in space and reclining wheelchair allows for frequent repositioning and long term seating.
+              </div>
+              <button
+                class="group relative inline-flex items-center justify-start overflow-hidden border-2 border-transparent bg-custom-color px-5 py-2 font-sm transition-all hover:bg-white mt-4">
+                <span
+                  class="absolute inset-0 border-0 border-white transition-all duration-100 ease-linear group-hover:border-2 group-hover:border-blue-900"></span>
+                <span
+                  class="relative w-full text-left text-white transition-colors duration-200 ease-in-out group-hover:text-blue-900">Learn
+                  More</span>
+              </button>
+            </div>
+            <div class="pl-4 pr-4 flex justify-between flex-wrap-reverse sm:flex-nowrap">
+              <a href="#" class="mr-2">
+                <img src="/images/arrow-left.png" class="h-5 w-12 sm:h-8 sm:w-16" />
+              </a>
+              <a href="#" class="ml-2">
+                <img src="/images/circle-arrow.png" class="h-5 w-12 sm:h-8 sm:w-16" />
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <div class="nationally-supported bg-custom-webbg">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-16 py-1">
+      <hr class="mt-2 mb-2 border-t-1 border-gray-500-600" />
+    </div>
+  </div>
+
+
+  <!-- catalogue section Html code [start] -->
+  <section class="nationally-supported bg-custom-webbg py-4">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-16 py-10">
+      <div class="flex text-left">
+        <div class="font-bold text-2xl bg-gradient-to-r  to-blue-950 from-blue-600 text-transparent bg-clip-text pb-7">
+          Catalogues</div>
+        <div class="text-blue-500 text-xs font-normal underline underline-offset-4 pl-5 pt-2">View all Catalogues </div>
+      </div>
+
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10">
+        <div class="flex flex-col">
+          <img src="/images/catalog1.png" alt="catalog-1" class="w-full object-cover">
+          <div class="flex justify-between items-center pt-6">
+            <div class="text-custom-color text-lg font-bold">Novis Branded Catalogue</div>
+            <a href="#"><img src="/images/circle-arrow.png" class="w-9 h-6" /></a>
+          </div>
+          <div class="text-blue-400 py-2 text-sm">August 2022</div>
+        </div>
+
+        <div class="flex flex-col">
+          <img src="/images/catalog2.png" alt="catalog-2" class="w-full object-cover">
+          <div class="flex justify-between items-center pt-6">
+            <div class="text-custom-color text-lg font-bold">
+              Pressure Injury Prevention Products Catalogue
+            </div>
+            <a href="#"><img src="/images/circle-arrow.png" class="w-9 h-6" /></a>
+          </div>
+          <div class="text-blue-400 py-2 text-sm">August 2022</div>
+        </div>
+
+        <div class="flex flex-col">
+          <img src="/images/catalog3.png" alt="catalog-3" class="w-full object-cover">
+          <div class="flex justify-between items-center pt-6">
+            <div class="text-custom-color text-lg font-bold">Community Hire Catalogue</div>
+            <a href="#"><img src="/images/circle-arrow.png" class="w-9 h-6" /></a>
+          </div>
+          <div class="text-blue-400 py-2 text-sm">August 2022</div>
+        </div>
+      </div>
+
+
+
+      <hr class="mt-12 mb-12 border-t-1 border-gray-500-600" />
+
+      <div class="grid md:grid-cols-12 gap-6 p-4">
+        <div class="lg:col-span-4 col-span-12 flex justify-center lg:justify-start">
+          <img src="/images/supported.png" alt="supported"
+            class="w-full max-w-xs sm:max-w-sm lg:max-w-md h-auto mx-auto lg:mx-0">
+        </div>
+        <div class="lg:col-span-8 col-span-12">
+          <div
+            class="font-bold pb-2 pt-4  sm:text-2xl text-2xl bg-gradient-to-r  to-blue-950 from-blue-600 text-transparent bg-clip-text">
+            Nationally supported by our trusted network
+          </div>
+          <div class="text-custom-color py-2 text-sm sm:text-base">
+            Find your nearest retail location
+          </div>
+          <form class="form-inline mt-6">
+            <input type="text" id="text" placeholder="Enter postcode or suburb here" name="text" required
+              class="py-2 px-3 box-border w-6/12 leading-4 text-custom-color" />
+            <select name="km" id="km" class="py-2 px-3 box-border  ml-2 leading-4 text-custom-color mr-2 mb-2">
+              <option value="10km">Within 10km</option>
+              <option value="15km">Within 15km</option>
+              <option value="20km">Within 20km</option>
+              <option value="25km">Within 25km</option>
+            </select>
+            <button
+              class="group relative inline-flex items-center justify-start overflow-hidden border-1  bg-custom-color px-5 py-2 font-sm transition-all hover:bg-white">
+              <span
+                class="absolute inset-0  border-0 border-white transition-all duration-100 ease-linear group-hover:border-[25px]"></span>
+              <span
+                class="relative w-full text-left text-white transition-colors duration-200 ease-in-out group-hover:text-blue-900">Find</span>
+            </button>
+
+          </form>
+        </div>
+      </div>
+
+
+
+
+    </div>
+  </section>
+  <div class="container mx-auto px-4 sm:px-6 lg:px-1">
+
+    <img src="/images/triangle.png" alt="triangle" />
+
+  </div>
+
+  <!-- Webinar Section html code [start]-->
+  <section class="upcoming-webinar">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-16 py-10">
+      <div class="flex text-left">
+        <div class="font-bold text-2xl bg-gradient-to-r  to-blue-950 from-blue-600 text-transparent bg-clip-text pb-7">
+          Upcoming Webinar</div>
+        <div class="text-blue-500 text-xs font-normal underline underline-offset-4 pl-5 pt-2">View Past Webinars </div>
+      </div>
+
+
+      <div class="grid md:grid-cols-12 gap-6 md:gap-10 mt-2">
+        <div class="lg:col-span-4 col-span-12">
+          <img src="/images/webinar.png" alt="webinar" class="w-full md:w-auto mx-auto">
+        </div>
+        <div class="lg:col-span-8 col-span-12">
+          <div
+            class="font-bold pb-2 text-xl  bg-gradient-to-r  to-blue-950 from-blue-600 text-transparent bg-clip-text">
+            Pressure Injury Prevention
+          </div>
+          <div class="text-gray-700 py-5 text-sm">
+            Pressure injuries typically appear in the form of a sore, or ulcer, on areas of the skin that are regularly
+            exposed to pressure. We are determined to provide 24/7 vigilant care to patients and physicians, from
+            specialized mattresses to air cell cushions. We help you develop a better understanding of pressure injury
+            prevention.
+          </div>
+          <button
+            class="group relative inline-flex items-center justify-start overflow-hidden border-2 border-transparent bg-custom-color px-5 py-2 font-sm transition-all hover:bg-white mt-6 sm:mt-10">
+            <span
+              class="absolute inset-0 border-0 border-white transition-all duration-100 ease-linear group-hover:border-2 group-hover:border-blue-900"></span>
+            <span
+              class="relative w-full text-left text-white transition-colors duration-200 ease-in-out group-hover:text-blue-900">Register
+              to attend</span>
+          </button>
+
+        </div>
+      </div>
+      <hr class="mt-16 mb-0 border-t-1 border-blue-600" />
+    </div>
+  </section>
+
+
+
+
+
+  <section class="Latest-News">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-16 py-8">
+      <div class="flex text-left">
+        <div class="font-bold pb-7 text-2xl bg-gradient-to-r  to-blue-950 from-blue-600 text-transparent bg-clip-text">
+          Latest News</div>
+        <div class="text-blue-500 text-xs font-normal underline underline-offset-4 pl-5 pt-2">View all News & Releases
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-12 gap-0">
+        <div class="lg:col-span-4 col-span-12">
+          <img src="/images/news1.png" alt="rating-star" class="w-auto">
+          <div class="text-custom-color py-3 text-lg font-bold ">Our new Kingsgrove Showroom Opening</div>
+          <div class="text-gray-700 py-0 text-sm ">Since 2003, Novis® has been providing clinical healthcare
+            products designed for hospitals, aged care facilities, rehabilitation providers and ...</div>
+          <div class="text-blue-400 py-4 text-sm"><a href="#">Read More</a></div>
+        </div>
+
+        <div class="lg:col-span-4 col-span-12">
+          <img src="/images/news2.png" alt="rating-star" class="w-fit">
+          <div class="text-custom-color py-3 text-lg font-bold ">New Configura Advance Chair Training Coming Soon
+          </div>
+          <div class="text-gray-700 py-0 text-sm ">Since 2003, Novis® has been providing clinical healthcare
+            products designed for hospitals, aged care facilities, rehabilitation providers and ...</div>
+          <div class="text-blue-500 py-4 text-sm"><a href="#">Read More</a></div>
+        </div>
+
+        <div class="lg:col-span-4 col-span-12">
+          <img src="/images/news3.png" alt="rating-star" class="w-fit">
+          <div class="text-custom-color py-3 text-lg font-bold">New Novis catalogue is out now</div>
+          <div class="text-gray-700 py-0 text-sm ">Since 2003, Novis® has been providing clinical healthcare
+            products designed for hospitals, aged care facilities, rehabilitation providers and ...</div>
+          <div class="text-blue-500 py-4 text-sm"><a href="#">Read More</a></div>
+        </div>
+
+      </div>
+
+
+
+    </div>
+  </section>
+
+
+
+
+  <section class="stay-upto-date">
+    <div class="bg-hero">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-16 py-10">
+        <div class="grid md:grid-cols-12 gap-0 ">
+          <div class="lg:col-span-6 col-span-12">
+            <div
+              class="font-bold pb-2 text-2xl bg-gradient-to-r  to-blue-950 from-blue-600 text-transparent bg-clip-text">
+              Stay Up To Date</div>
+            <div class="text-gray-700 py-0">Never miss an update or announcement by subscribing here to Novis news</div>
+          </div>
+          <div class="lg:col-span-6 col-span-12 ">
+            <form class="form-inline text-right mt-5">
+              <input type="email" id="email" placeholder="Your email here" name="email" required
+                class="py-2 px-3 box-border w-6/12 leading-4" />
+              <button
+                class="group relative inline-flex items-center justify-start overflow-hidden border-1  bg-custom-color px-5 py-2 font-sm transition-all hover:bg-white ml-2">
+                <span
+                  class="absolute inset-0  border-0 border-white transition-all duration-100 ease-linear group-hover:border-[25px]"></span>
+                <span
+                  class="relative w-full text-left text-white transition-colors duration-200 ease-in-out group-hover:text-blue-900">Subscribe</span>
+              </button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <div>
+    <div class="container mx-auto px-4 sm:px-6 lg:px-16 py-8">
+      <div
+        class="font-bold leading-4 pb-12 text-2xl bg-gradient-to-r  to-blue-950 from-blue-600 text-transparent bg-clip-text justify-center flex">
+        Don’t just take our word for it</div>
+
+      <div class="grid md:grid-cols-12 gap-0">
+        <div class="lg:col-span-4 col-span-12">
+          <div class="flex items-start space-x-2">
+            <img src="/images/rating-star.png" alt="rating-star" class="h-4 w-4">
+            <img src="/images/rating-star.png" alt="rating-star" class="h-4 w-4">
+            <img src="/images/rating-star.png" alt="rating-star" class="h-4 w-4">
+            <img src="/images/rating-star.png" alt="rating-star" class="h-4 w-4">
+            <img src="/images/rating-star.png" alt="rating-star" class="h-4 w-4">
+          </div>
+          <div class="text-gray-700 py-3 text-sm">Great service! I had no idea where to start supplying<br /> my Mum
+            with a wheelchair. Andrew was supportive<br /> and helpful. I unpacked the chair yesterday and it is<br />
+            perfect. Quick delivery and a great product.</div>
+          <div class="text-blue-300 py-1 text-sm">Jeanette O'Brien</div>
+        </div>
+
+        <div class="lg:col-span-4 col-span-12">
+          <div class="flex items-start space-x-2">
+            <img src="/images/rating-star.png" alt="rating-star" class="h-4 w-4">
+            <img src="/images/rating-star.png" alt="rating-star" class="h-4 w-4">
+            <img src="/images/rating-star.png" alt="rating-star" class="h-4 w-4">
+            <img src="/images/rating-star.png" alt="rating-star" class="h-4 w-4">
+            <img src="/images/rating-star.png" alt="rating-star" class="h-4 w-4">
+          </div>
+          <div class="text-gray-700 py-3 text-sm">Great service! I had no idea where to start supplying<br /> my Mum
+            with a wheelchair. Andrew was supportive<br /> and helpful. I unpacked the chair yesterday and it is<br />
+            perfect. Quick delivery and a great product.</div>
+          <div class="text-blue-300 py-1 text-sm">Jeanette O'Brien</div>
+        </div>
+
+        <div class="lg:col-span-4 col-span-12">
+          <div class="flex items-start space-x-2">
+            <img src="/images/rating-star.png" alt="rating-star" class="h-4 w-4">
+            <img src="/images/rating-star.png" alt="rating-star" class="h-4 w-4">
+            <img src="/images/rating-star.png" alt="rating-star" class="h-4 w-4">
+            <img src="/images/rating-star.png" alt="rating-star" class="h-4 w-4">
+            <img src="/images/rating-star.png" alt="rating-star" class="h-4 w-4">
+          </div>
+          <div class="text-gray-700 py-3 text-sm">Great service! I had no idea where to start supplying<br /> my Mum
+            with a wheelchair. Andrew was supportive<br /> and helpful. I unpacked the chair yesterday and it is<br />
+            perfect. Quick delivery and a great product.</div>
+          <div class="text-blue-300 py-1 text-sm">Jeanette O'Brien</div>
+        </div>
+
+      </div>
+      <hr class="mt-10 mb-5" />
+      <div class="flex items-center justify-evenly py-4">
+        <div><img src="/images/product1.png" alt="product1" /></div>
+        <div><img src="/images/product2.png" alt="product2" /></div>
+        <div><img src="/images/product3.png" alt="product3" /></div>
+        <div><img src="/images/product4.png" alt="product4" /></div>
+        <div><img src="/images/product5.png" alt="product5" /></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- scroll to top code -->
+  <button id="scroll-to-top" onclick="scrollToTop()"
+    class="bg-blue-900 text-white p-1 leading-1 flex justify-center items-center fixed bottom-12 right-3 z-50 rounded-full opacity-0 pointer-events-none shadow-lg shadow-blue-500/50">
+    <span class="text-3xl">&#42779;</span>
+  </button>
+  <footer>
+    <div class="bg-custom-webbg text-gray-700">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-16 py-8">
+        <div class="grid md:grid-cols-12 grid-cols-1 gap-0">
+          <div class="lg:col-span-3 col-span-12">
+            <h6 class="font-bold leading-4 custom-color uppercase mt-4">CUSTOMER INFO</h6>
+            <ul class="list-none mt-5 space-y-2 text-sm">
+              <li><a href="#" class="">Community Rental Request</a></li>
+              <li><a href="#" class="">Community Trial Request</a></li>
+              <li><a href="#" class="">Equipment Service Support</a></li>
+              <li><a href="#" class="">Return Authorisation Form</a></li>
+              <li><a href="#" class="">AS/NZS Standards</a></li>
+              <li><a href="#" class="">Novis Warranty Statement</a></li>
+              <li><a href="#" class="">Where to Buy</a></li>
+              <li><a href="#" class="">Return Authorisation Form</a></li>
+            </ul>
+          </div>
+
+
+          <div class="lg:col-span-3 col-span-12">
+            <h6 class="font-bold leading-4 custom-color uppercase mt-4">MEMBER ACCESS</h6>
+            <ul class="list-none mt-5 space-y-2 text-sm">
+              <li><a href="#" class="">Partner Login</a></li>
+              <li><a href="#" class="">Product Brochures & Resources</a></li>
+              <li><a href="#" class="">NORM Login</a></li>
+              <li><a href="#" class="">Register to become a Partner</a></li>
+            </ul>
+          </div>
+
+          <div class="lg:col-span-3 col-span-12">
+            <h6 class="font-bold leading-4 custom-color uppercasemt-4 mt-4">EDUCATION</h6>
+            <ul class="list-none mt-5 space-y-2 text-sm">
+              <li><a href="#" class="">Articles</a></li>
+              <li><a href="#" class="">Pressure Injury Prevention</a></li>
+              <li><a href="#" class="">Dementia Resources</a></li>
+              <li><a href="#" class="">Star Cushions for Wheelchair Users</a></li>
+              <li><a href="#" class="">Handle with Care Webinar</a></li>
+              <li><a href="#" class="">Alternating Mattress Solutions Webinar</a></li>
+              <li><a href="#" class="">Bathroom Safety Webinar</a></li>
+              <li><a href="#" class="">Upcoming Webinars</a></li>
+            </ul>
+          </div>
+
+          <div class="lg:col-span-3 col-span-12">
+            <h6 class="font-bold leading-4 custom-color uppercase mt-4">Contact us</h6>
+            <ul class="list-none mt-5 space-y-2 text-sm font-medium">
+              <li><a href="#" class="flex"><img src="/images/circle-phone.png" class="pr-3" /> 1300 738 885</a></li>
+              <li class="py-3 leading-6 underline underline-offset-8 pb-0 text-blue-500 decoration-gray-300"><a
+                  href="#">Contact Us Here</a></li>
+              <li class="flex items-start py-6">
+                <a href="#" class="pr-5"><img src="/images/facebook.png" alt="facebook" /></a>
+                <a href="#" class="pr-5"><img src="/images/youtube.png" alt="youtube" /></a>
+                <a href="#"><img src="/images/linked.png" alt="linkedin" /></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <div class="container mx-auto px-4 sm:px-6 lg:px-16 py-8">
+      <div class="grid md:grid-cols-12 grid-cols-1 gap-0">
+        <div class="lg:col-span-3 col-span-12">
+          <img src="/images/map.png" alt="map" />
+        </div>
+
+
+        <div class="lg:col-span-3 col-span-12 pt-2">
+          <div class="font-bold leading-4 text-footer-color text-sm uppercase flex">
+            <img src="/images/footer-location.png" class="pr-2" /> NSW
+          </div>
+          <div class="list-none mt-3 space-y-2 text-sm leading-7 text-gray-700">12/12 Mars Rd, Lane Cove West NSW 2066
+            B3/15 Forrester St, Kingsgrove NSW 2208 3D/6 Boundary Rd, Northmead NSW 2152</div>
+        </div>
+
+        <div class="lg:col-span-3 col-span-12 pt-2">
+          <div class="font-bold leading-4 text-footer-color text-sm uppercase flex">
+            <img src="/images/footer-location.png" class="pr-2" /> OLD
+          </div>
+          <div class="list-none mt-3 space-y-2 text-sm leading-7 text-gray-700">3/59 Eastern Rd, Browns Plains QLD 4118
+          </div>
+        </div>
+
+        <div class="lg:col-span-3 col-span-12 pt-2">
+          <div class="font-bold leading-4 text-footer-color text-sm uppercase flex">
+            <img src="/images/footer-location.png" class="pr-2" /> VIC
+          </div>
+          <div class="list-none mt-3 space-y-2 text-sm leading-7 text-gray-700">2/59 Eastern Rd, Browns Plains VIC 3211
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+    <div class="bg-custom-footer-bg py-4">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-16 py-4">
+
+        <div class="col-span-12 space-y-2 text-sm leading-5 text-gray-700">Whilst every effort is made to provide
+          information that is accurate, occasionally, one or more items on our website may be incorrectly priced. Where
+          a product is listed at an incorrect price due to typographical, photographic, or technical error or error in
+          pricing information, Novis reserves the right to refuse, cancel or amend any product(s) listed at the
+          incorrect price. All prices shown are retail prices. To see trade prices, please log into your existing
+          partner membership. All prices shown in Australia Dollars. </div>
+      </div>
+    </div>
+
+    <div class="bg-custom-webbg py-2">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-16 py-4">
+        <div class="flex flex-col sm:flex-row items-start sm:items-stretch justify-between space-y-4 sm:space-y-0">
+          <div
+            class="flex flex-col sm:flex-row items-start sm:items-stretch space-y-2 sm:space-y-0 sm:space-x-4 text-center sm:text-left text-custom-color">
+            <div class="font-bold text-sm">&#169; 2022 All Rights Reserved</div>
+            <div class="text-sm"><a href="#" class="hover:underline">Privacy Policy</a></div>
+            <div class="text-sm"><a href="#" class="hover:underline">Warranty</a></div>
+            <div class="text-sm"><a href="#" class="hover:underline">Cookie Policy</a></div>
+          </div>
+          <div class="mt-4 sm:mt-0">
+            <img src="/images/logo.png" alt="footer-logo" class="w-16">
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </footer>
+
+  <script src="/src/myscript.js"></script>
+</body>
+
+</html>
