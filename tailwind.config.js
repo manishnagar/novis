@@ -16,7 +16,6 @@ module.exports = {
       },
       backgroundImage: {
         'hero': "url('/images/bg-img.png')",
-        // 'sectionone' :"url('/images/slide1.png')", 
       },
 
            keyframes: {
@@ -30,13 +29,7 @@ module.exports = {
       }
 
     },
-    // container: {
-    //   padding: {
-    //     default: '20px',
-    //     sm: '24px',
-    //     md: '32px',
-    //   },
-    // }
+
   },
   plugins: [],
 }
