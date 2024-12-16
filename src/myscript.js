@@ -98,3 +98,28 @@ const feedbackButton = document.getElementById('feedbackButton');
 
 
 
+  document.addEventListener('DOMContentLoaded', function () {
+    const modal = document.getElementById('popupModal');
+    const checkbox = document.getElementById('acceptTerms');
+    const proceedButton = document.getElementById('proceedButton');
+    const body = document.body;
+
+    // Display the modal and disable body scrolling
+    modal.classList.remove('hidden');
+    body.classList.add('overflow-hidden');
+
+    // Disable interaction with the rest of the page
+    body.style.pointerEvents = 'none'; // Disable interactions globally
+    modal.style.pointerEvents = 'auto'; // Enable interactions only with the modal
+
+    // Enable the "Proceed" button only when the checkbox is checked
+    checkbox.addEventListener('change', function () {
+      proceedButton.disabled = !checkbox.checked;
+    });
+
+    proceedButton.addEventListener('click', function () {
+      modal.classList.add('hidden');
+      body.classList.remove('overflow-hidden');
+      body.style.pointerEvents = ''; // Re-enable interactions globally
+    });
+  });
