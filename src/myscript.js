@@ -16,18 +16,48 @@ const images = [
 
 let currentIndex = 0;
 const backgroundImage = document.getElementById('backgroundImage');
+
+// Function to update the image
+function updateImage(index) {
+  backgroundImage.src = images[index];
+}
+
 // Left arrow click handler
 document.getElementById('leftArrow').addEventListener('click', function(event) {
   event.preventDefault();
   currentIndex = (currentIndex - 1 + images.length) % images.length; 
-  backgroundImage.src = images[currentIndex]; 
+  updateImage(currentIndex);
+  resetAutoplay(); // Reset autoplay timer on manual action
 });
+
 // Right arrow click handler
 document.getElementById('rightArrow').addEventListener('click', function(event) {
   event.preventDefault();
   currentIndex = (currentIndex + 1) % images.length; 
-  backgroundImage.src = images[currentIndex]; 
+  updateImage(currentIndex);
+  resetAutoplay(); // Reset autoplay timer on manual action
 });
+
+// Autoplay functionality
+let autoplayInterval = 4000; // Change image every 3 seconds
+let autoplayTimer = setInterval(function() {
+  currentIndex = (currentIndex + 1) % images.length;
+  updateImage(currentIndex);
+}, autoplayInterval);
+
+// Reset autoplay timer
+function resetAutoplay() {
+  clearInterval(autoplayTimer); // Stop current timer
+  autoplayTimer = setInterval(function() {
+    currentIndex = (currentIndex + 1) % images.length;
+    updateImage(currentIndex);
+  }, autoplayInterval);
+}
+
+// Ensure the first image is displayed initially
+updateImage(currentIndex);
+
+
 
 
 
