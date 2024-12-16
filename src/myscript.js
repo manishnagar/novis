@@ -8,10 +8,10 @@ toggleButton.addEventListener("click", () => {
 
 // slider js code[start]
 const images = [
-  '/images/slider22.png', 
-  '/images/slider23.png', 
-  '/images/slider24.png', 
-  '/images/slider25.png'
+  './images/slider22.png', 
+  './images/slider23.png', 
+  './images/slider24.png', 
+  './images/slider25.png'
 ];
 
 let currentIndex = 0;
